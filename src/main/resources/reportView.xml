@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applications>
+	<application applicationName="songshu">
+		<report reportName="songshu_flux" viewName="流量统计">
+		    <view viewName="stat_time" fieldName="stat_time" isDimension="true"/>
+			<view viewName="os" fieldName="os" isDimension="true"/>
+			<view viewName="platform" fieldName="platform" isDimension="true"/>
+			<view viewName="v_uv" fieldName="v_uv" />
+			<view viewName="v_uv5" fieldName="v_uv5" />
+			<view viewName="v_uv30" fieldName="v_uv5" />
+			<view viewName="v_uv7" fieldName="v_uv7" />
+			<view viewName="v_uv90" fieldName="v_uv90" />
+			<view viewName="v_pv" fieldName="v_pv" />
+			<view viewName="v_uv_dayold" fieldName="v_uv_dayold" />
+			<view viewName="v_pv_dayold" fieldName="v_pv_dayold" />
+			<view viewName="v_uv_inc" fieldName="v_uv_inc" />
+			<view viewName="v_uv_total" fieldName="v_uv_total" />
+		</report>
+		<report reportName="songshu_new_keep10" viewName="10日激活留存率">
+		    <view viewName="stat_time" fieldName="stat_time" isDimension="true"/>
+			<view viewName="os" fieldName="os" isDimension="true"/>
+			<view viewName="platform" fieldName="platform" isDimension="true"/>
+			<view viewName="v_uv_inc" fieldName="v_uv_inc" />
+			<view viewName="v_new_keep_day1" fieldName="v_keep_day1" aggregate="v_new_keep_day1/v_uv_inc"/>
+			<view viewName="v_new_keep_day2" fieldName="v_keep_day2" aggregate="v_new_keep_day2/v_uv_inc" />
+			<view viewName="v_new_keep_day3" fieldName="v_keep_day3" aggregate="v_new_keep_day3/v_uv_inc" />
+			<view viewName="v_new_keep_day4" fieldName="v_keep_day4" aggregate="v_new_keep_day4/v_uv_inc" />
+			<view viewName="v_new_keep_day5" fieldName="v_keep_day5" aggregate="v_new_keep_day5/v_uv_inc" />
+			<view viewName="v_new_keep_day6" fieldName="v_keep_day6" aggregate="v_new_keep_day6/v_uv_inc" />
+			<view viewName="v_new_keep_day7" fieldName="v_keep_day7" aggregate="v_new_keep_day7/v_uv_inc" />
+			<view viewName="v_new_keep_day8" fieldName="v_keep_day8" aggregate="v_new_keep_day8/v_uv_inc" />
+			<view viewName="v_new_keep_day9" fieldName="v_keep_day9" aggregate="v_new_keep_day9/v_uv_inc" />
+			<view viewName="v_new_keep_day10" fieldName="v_keep_day10" aggregate="v_new_keep_day10/v_uv_inc" />
+		</report>
+		<report reportName="songshu_act_keep10" viewName="10日使用留存率">
+		    <view viewName="stat_time" fieldName="stat_time" isDimension="true"/>
+			<view viewName="os" fieldName="os" isDimension="true"/>
+			<view viewName="platform" fieldName="platform" isDimension="true"/>
+			<view viewName="v_uv" fieldName="v_uv" />
+			<view viewName="v_keep_day1" fieldName="v_keep_day1" aggregate="v_keep_day1/v_uv"/>
+			<view viewName="v_keep_day2" fieldName="v_keep_day2" aggregate="v_keep_day2/v_uv" />
+			<view viewName="v_keep_day3" fieldName="v_keep_day3" aggregate="v_keep_day3/v_uv" />
+			<view viewName="v_keep_day4" fieldName="v_keep_day4" aggregate="v_keep_day4/v_uv" />
+			<view viewName="v_keep_day5" fieldName="v_keep_day5" aggregate="v_keep_day5/v_uv" />
+			<view viewName="v_keep_day6" fieldName="v_keep_day6" aggregate="v_keep_day6/v_uv" />
+			<view viewName="v_keep_day7" fieldName="v_keep_day7" aggregate="v_keep_day7/v_uv" />
+			<view viewName="v_keep_day8" fieldName="v_keep_day8" aggregate="v_keep_day8/v_uv" />
+			<view viewName="v_keep_day9" fieldName="v_keep_day9" aggregate="v_keep_day9/v_uv" />
+			<view viewName="v_keep_day10" fieldName="v_keep_day10" aggregate="v_keep_day10/v_uv" />
+		</report>
+	</application>
+</applications>

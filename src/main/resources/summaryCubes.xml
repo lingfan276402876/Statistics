@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applications>
+	<application applicationName="songshu">
+	    <!-- uvName、pvName与cube中的配置名称保持一直 -->
+		<summaryCube summaryCubeName="login" uvName="v_login_number" pvName="v_login_count" refCube="login">
+			<dimensions>
+			     <!-- cubeDimension与cube中的配置名称保持一直 -->
+				<dimension cubeDimension="os"/>
+				<dimension cubeDimension="platform"/>
+			</dimensions>
+		</summaryCube>
+	</application>
+</applications>

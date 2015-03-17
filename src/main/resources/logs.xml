@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applications>
+	<application applicationName="songshu">
+		<log logName="login">
+			<filed fieldName="ucid" remak="玩家登陆账号" dataType="string" />
+			<filed fieldName="count" remak="玩家登陆松果奖励" dataType="number" />
+			<filed fieldName="platform" remak="来自哪里" dataType="number" />
+			<filed fieldName="os" remak="操作系统" dataType="string" />
+		</log>
+		<log logName="player_db">
+			<filed fieldName="ucid" remak="玩家账号" dataType="string" />
+			<filed fieldName="level" remak="玩家等级" dataType="number" />
+		</log>
+	</application>
+</applications>

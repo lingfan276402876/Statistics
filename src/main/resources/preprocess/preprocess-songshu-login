@@ -1,0 +1,28 @@
+#!/bin/bash
+while getopts "b:e:c:" optname
+do
+    case "$optname" in
+    "b")
+        btime=$OPTARG;;
+    "e")
+        etime=$OPTARG;;
+    "c")
+        cluster=$OPTARG;;
+    "?")
+        echo "Unknown option $OPTARG";
+        exit;;
+    ":")
+        echo "No argument value for option $OPTARG";
+        exit;;
+    *)
+    echo "Unknown error while processing options";
+        exit;
+        ;;
+    esac
+done
+year=${btime::4}
+month=${btime:4:2}
+day=${btime:6:2}
+date="${year}-${month}-${day}"
+hour=${btime:8:2}
+cat /home/songshu/logs/*login*.log.$date|awk -F '|' '{print "time="$1"`ucid="$2"`count="$3"`platform="$4"`os="$5"`version=appstore版本"}'

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applications>
+	<application applicationName="songshu">
+	    <!-- 登陆 -->
+		<cube cubeName="login" refLog="login">
+			<dimensions>
+				<dimension dimensionName="os" fieldName="os" />
+				<dimension dimensionName="platform" fieldName="platform" />
+			</dimensions>
+			<kpis>
+				<kpi kpiName="v_login_number" fieldName="ucid" operationType="UNIQUE" />
+				<kpi kpiName="v_login_count" fieldName="ucid" operationType="COUNT" />
+				<kpi kpiName="v_login_reward_count" fieldName="count" operationType="SUM" />
+			</kpis>
+		</cube>
+		<!-- 玩家等级 -->
+		<cube cubeName="player_db" refLog="player_db">
+			<dimensions>
+				<dimension dimensionName="level" fieldName="level" />
+			</dimensions>
+			<kpis>
+				<kpi kpiName="v_login_count" fieldName="ucid" operationType="COUNT" />
+			</kpis>
+		</cube>
+	</application>
+</applications>

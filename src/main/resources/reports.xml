@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applications>
+	<application applicationName="songshu">
+		<report reportName="songshu_flux" desc="流量统计" refCube="" refSummaryCube="login" tableName="STAT_SONGSHU_FLUX" condition="">
+		    <!-- kpiName：与cube的维度的名称保持一致  -->
+			<dimensions>
+				<dimension dimensionName="os" fieldName="os" />
+				<dimension dimensionName="platform" fieldName="platform" />
+			</dimensions>
+			<!-- kpiName：与cube的指标的名称保持一致  -->
+			<kpis>
+				<kpi kpiName="v_uv" fieldName="v_uv" newOld="new"/>
+				<kpi kpiName="v_uv5" fieldName="v_uv5" newOld="new"/>
+				<kpi kpiName="v_uv30" fieldName="v_uv5" newOld="new"/>
+			    <kpi kpiName="v_uv7" fieldName="v_uv7" newOld="new"/>
+				<kpi kpiName="v_uv90" fieldName="v_uv90" newOld="new"/>
+				<kpi kpiName="v_pv" fieldName="v_pv" newOld="new"/>
+				<kpi kpiName="v_uv_dayold" fieldName="v_uv_dayold" newOld="new"/>
+				<kpi kpiName="v_pv_dayold" fieldName="v_pv_dayold" newOld="new"/>
+				<kpi kpiName="v_uv_inc" fieldName="v_uv_inc" newOld="old"/>
+				<kpi kpiName="v_uv_total" fieldName="v_uv_total" newOld="old"/>
+			</kpis>
+		</report>
+		<report reportName="songshu_new_keep10" desc="10日激活留存率" refCube="" refSummaryCube="login" tableName="STAT_SONGSHU_DAY_NEW_KEEP10" condition="">
+		    <!-- kpiName：与cube的维度的名称保持一致  -->
+			<dimensions>
+				<dimension dimensionName="os" fieldName="os" />
+				<dimension dimensionName="platform" fieldName="platform" />
+			</dimensions>
+			<!-- kpiName：与cube的指标的名称保持一致  -->
+			<kpis>
+				<kpi kpiName="v_uv_inc" fieldName="v_uv_inc" newOld="old"/>
+				<kpi kpiName="v_new_keep_day1" fieldName="v_keep_day1" newOld="new"/>
+				<kpi kpiName="v_new_keep_day2" fieldName="v_keep_day2" newOld="new"/>
+				<kpi kpiName="v_new_keep_day3" fieldName="v_keep_day3" newOld="new"/>
+				<kpi kpiName="v_new_keep_day4" fieldName="v_keep_day4" newOld="new"/>
+				<kpi kpiName="v_new_keep_day5" fieldName="v_keep_day5" newOld="new"/>
+				<kpi kpiName="v_new_keep_day6" fieldName="v_keep_day6" newOld="new"/>
+				<kpi kpiName="v_new_keep_day7" fieldName="v_keep_day7" newOld="new"/>
+				<kpi kpiName="v_new_keep_day8" fieldName="v_keep_day8" newOld="new"/>
+				<kpi kpiName="v_new_keep_day9" fieldName="v_keep_day9" newOld="new"/>
+				<kpi kpiName="v_new_keep_day10" fieldName="v_keep_day10" newOld="new"/>
+			</kpis>
+		</report>
+		<report reportName="songshu_act_keep10" desc="10日使用留存率" refCube="" refSummaryCube="login" tableName="STAT_SONGSHU_DAY_ACT_KEEP10" condition="">
+		    <!-- kpiName：与cube的维度的名称保持一致  -->
+			<dimensions>
+				<dimension dimensionName="os" fieldName="os" />
+				<dimension dimensionName="platform" fieldName="platform" />
+			</dimensions>
+			<!-- kpiName：与cube的指标的名称保持一致  -->
+			<kpis>
+				<kpi kpiName="v_uv" fieldName="v_uv"  newOld="new"/>
+				<kpi kpiName="v_keep_day1" fieldName="v_keep_day1" newOld="new"/>
+				<kpi kpiName="v_keep_day2" fieldName="v_keep_day2" newOld="new"/>
+				<kpi kpiName="v_keep_day3" fieldName="v_keep_day3" newOld="new"/>
+				<kpi kpiName="v_keep_day4" fieldName="v_keep_day4" newOld="new"/>
+				<kpi kpiName="v_keep_day5" fieldName="v_keep_day5" newOld="new"/>
+				<kpi kpiName="v_keep_day6" fieldName="v_keep_day6" newOld="new"/>
+				<kpi kpiName="v_keep_day7" fieldName="v_keep_day7" newOld="new"/>
+				<kpi kpiName="v_keep_day8" fieldName="v_keep_day8" newOld="new"/>
+				<kpi kpiName="v_keep_day9" fieldName="v_keep_day9" newOld="new"/>
+				<kpi kpiName="v_keep_day10" fieldName="v_keep_day10" newOld="new"/>
+			</kpis>
+		</report>
+	</application>
+</applications>

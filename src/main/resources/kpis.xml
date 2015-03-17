@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kpis>
+	<kpi kpiName="v_uv" expr="count(distinct ${unikey}) from ${T} where modify_time='${time}'"/>
+	<kpi kpiName="v_uv5" expr="count(distinct ${unikey}) from ${T} where modify_time>='${time-5}' "/>
+	<kpi kpiName="v_uv30" expr="count(distinct ${unikey}) from ${T} where modify_time>='${time-30}' "/>
+	<kpi kpiName="v_uv7" expr="count(distinct ${unikey}) from ${T} where modify_time>='${time-7}'"/>
+	<kpi kpiName="v_uv90" expr="count(distinct ${unikey}) from ${T} where modify_time>='${time-90}' "/>
+	<kpi kpiName="v_pv" expr="sum(${pvName}) from ${T} where modify_time='${time}' "/>
+	<kpi kpiName="v_uv_dayold" expr="count(distinct ${unikey}) from ${T}  a where modify_time='${time}' and exists (select * from ${WHOLE} where create_time &lt;='${time-1}' and a.${unikey}=${unikey})"/>
+	<kpi kpiName="v_pv_dayold" expr="sum(${pvName}) from ${T} a where  modify_time='${time}' and exists (select * from ${WHOLE} where create_time &lt;='${time-1}' and a.${unikey}=${unikey})  "/>
+	<kpi kpiName="v_uv_inc" expr="count(distinct ${unikey}) from ${WHOLE} where create_time='${time}' "/>
+	<kpi kpiName="v_uv_total" expr="count(${unikey}) from ${WHOLE} "/>
+	<kpi kpiName="v_keep_day1" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${T-1} where modify_time='${time-1}')" timeAdd="-1"/>
+	<kpi kpiName="v_keep_day2" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${T-2} where modify_time='${time-2}')" timeAdd="-2"/>
+	<kpi kpiName="v_keep_day3" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${T-3} where modify_time='${time-3}')" timeAdd="-3"/>
+	<kpi kpiName="v_keep_day4" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${T-4} where modify_time='${time-4}')" timeAdd="-4"/>
+	<kpi kpiName="v_keep_day5" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${T-5} where modify_time='${time-5}')" timeAdd="-5"/>
+	<kpi kpiName="v_keep_day6" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${T-6} where modify_time='${time-6}')" timeAdd="-6"/>
+	<kpi kpiName="v_keep_day7" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${T-7} where modify_time='${time-7}')" timeAdd="-7"/>
+	<kpi kpiName="v_keep_day8" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${T-8} where modify_time='${time-8}')" timeAdd="-8"/>
+	<kpi kpiName="v_keep_day9" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${T-9} where modify_time='${time-9}')" timeAdd="-9"/>
+	<kpi kpiName="v_keep_day10" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${T-10} where modify_time='${time-10}')" timeAdd="-10"/>
+	
+	<kpi kpiName="v_new_keep_day1" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${WHOLE} where create_time='${time-1}')"  timeAdd="-1"/>
+	<kpi kpiName="v_new_keep_day2" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${WHOLE} where create_time='${time-2}')" timeAdd="-2"/>
+	<kpi kpiName="v_new_keep_day3" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${WHOLE} where create_time='${time-3}')" timeAdd="-3"/>
+	<kpi kpiName="v_new_keep_day4" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${WHOLE} where create_time='${time-4}')" timeAdd="-4"/>
+	<kpi kpiName="v_new_keep_day5" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${WHOLE} where create_time='${time-5}')" timeAdd="-5"/>
+	<kpi kpiName="v_new_keep_day6" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${WHOLE} where create_time='${time-6}')" timeAdd="-6"/>
+	<kpi kpiName="v_new_keep_day7" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${WHOLE} where create_time='${time-7}')" timeAdd="-7"/>
+	<kpi kpiName="v_new_keep_day8" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${WHOLE} where create_time='${time-8}')" timeAdd="-8"/>
+	<kpi kpiName="v_new_keep_day9" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${WHOLE} where create_time='${time-9}')" timeAdd="-9"/>
+	<kpi kpiName="v_new_keep_day10" expr="count(${unikey}) from ${T} where modify_time='${time}' and  ${unikey} in (select ${unikey} from ${WHOLE} where create_time='${time-10}')" timeAdd="-10"/>
+</kpis>
